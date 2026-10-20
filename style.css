@@ -1,11 +1,11 @@
 :root{
     --cor-fundo: #f4efe6;
-    --cor-texto: red;
-    --cor-principal: green;
-    --cor-secundaria: blue;
+    --cor-texto: rgb(0, 0, 0);
+    --cor-principal: rgb(228, 207, 152);
+    --cor-secundaria: rgba(40, 167, 15, 0.671);
     --cor-hover: yellow;
     --cor-superficie: orange;
-    --cor-card: black;
+    --cor-card: rgb(87, 150, 63);
     --cor-legenda: brown;
     --cor-clara: pink;
     --cor-rodape: purple;
