@@ -2,12 +2,12 @@
     --cor-fundo: #f4efe6;
     --cor-texto: rgb(0, 0, 0);
     --cor-principal: rgb(228, 207, 152);
-    --cor-secundaria: rgba(40, 167, 15, 0.671);
+    --cor-secundaria: rgba(143, 107, 9, 0.671);
     --cor-hover: yellow;
-    --cor-superficie: orange;
+    --cor-superficie: rgb(209, 179, 124);
     --cor-card: rgb(87, 150, 63);
-    --cor-legenda: brown;
-    --cor-clara: rgb(34, 59, 17);
+    --cor-legenda: rgb(17, 1, 1);
+    --cor-clara: rgb(116, 92, 56);
     --cor-rodape: rgb(81, 88, 17);
 
 }
