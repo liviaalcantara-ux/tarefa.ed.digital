@@ -1,30 +1,35 @@
-:root{
-    --cor-fundo: #f4efe6;
-    --cor-texto: rgb(0, 0, 0);
-    --cor-principal: rgb(151, 101, 36);
-    --cor-secundaria: rgba(88, 136, 49, 0.671);
-    --cor-hover: rgb(161, 105, 0);
-    --cor-superficie: rgb(124, 89, 23);
-    --cor-card: rgb(44, 110, 18);
-    --cor-legenda: rgb(17, 1, 1);
-    --cor-clara: rgb(116, 92, 56);
-    --cor-rodape: rgb(114, 86, 34);
-
+:root {
+    --cor-fundo: #f7f3eb;         /* Bege bem claro para o fundo geral */
+    --cor-texto: #1f1a14;         /* Quase preto (mais suave que o preto puro) */
+    --cor-principal: #8c5a19;     /* Marrom dourado para cabeçalho, títulos e botões */
+    --cor-secundaria: #4a773c;    /* Verde folha para os links do menu */
+    --cor-hover: #6e440e;         /* Marrom mais escuro ao passar o mouse */
+    --cor-superficie: #ebe3d5;    /* Creme suave para o fundo das sections */
+    --cor-card: #e3ebd9;          /* Verde bem clarinho para os cards */
+    --cor-legenda: #595045;       /* Cinza amarronzado para legendas */
+    --cor-clara: #ffffff;         /* Branco para textos em fundos escuros */
+    --cor-rodape: #5c3a10;        /* Marrom profundo para o rodapé */
 }
 
 .tema-escuro {
     --cor-fundo: #121212;
-    --cor-texto: #f5f5f5;
-    --cor-principal: #d7a6ca;
-    --cor-supericie: #1e1e1e;
-    --cor-card: #2b2530;
+    --cor-texto: #f0f0f0;
+    --cor-principal: #d7a6ca;     /* Lilás suave que você escolheu */
+    --cor-secundaria: #3a3042;    /* Roxo escuro para os botões do menu */
+    --cor-hover: #b882aa;         /* Lilás um pouco mais forte no hover */
+    --cor-superficie: #1e1e1e;    /* Cinza escuro para as sections */
+    --cor-card: #28232d;          /* Cinza arroxeado para os cards */
+    --cor-legenda: #b0b0b0;       /* Cinza claro para as legendas aparecerem */
+    --cor-clara: #121212;         /* Texto escuro para contrastar com o botão lilás */
+    --cor-rodape: #1a161f;        /* Fundo escuro para o rodapé */
 }
 
 body {
-    background-color: var(--cor-principal);
+    background-color: var(--cor-fundo);
     color: var(--cor-texto);
     font-family: Arial, sans-serif;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s; /* Deixa a troca de tema suave */
 }
 
 header {
@@ -36,6 +41,7 @@ header {
 
 h1 {
     font-size: 36px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -52,28 +58,30 @@ nav {
 }
 
 nav a {
-    color:var(--cor-clara);
+    color: #ffffff; /* Mantém o texto branco no menu em ambos os temas */
     text-decoration: none;
-    background-color:var(--cor-secundaria);
+    background-color: var(--cor-secundaria);
     padding: 10px 15px;
     border-radius: 8px;
     margin: 5px;
     display: inline-block;
+    transition: background-color 0.2s;
 }
 
 nav a:hover {
-    background-color:var(--cor-hover);
+    background-color: var(--cor-hover);
 }
 
 main {
     width: 80%;
+    max-width: 1100px; /* Evita que o site fique esticado demais em telas grandes */
     margin: auto;
 }
 
 section {
-    background-color:var(--cor-superficie);
-    margin: 20px 0;
-    padding: 20px;
+    background-color: var(--cor-superficie);
+    margin: 25px 0;
+    padding: 25px;
     border-radius: 12px;
 }
 
@@ -88,13 +96,13 @@ img {
 figcaption {
     text-align: center;
     font-size: 14px;
-    color:var(--cor-legenda);
+    color: var(--cor-legenda);
     margin-top: 8px;
 }
 
 .card {
-    background-color:var(--cor-card);
-    padding: 15px;
+    background-color: var(--cor-card);
+    padding: 20px;
     margin: 15px 0;
     border-left: 6px solid var(--cor-principal);
     border-radius: 10px;
@@ -103,27 +111,30 @@ figcaption {
 
 .card h3 {
     margin-top: 0;
+    color: var(--cor-principal);
 }
 
 footer {
     background-color: var(--cor-rodape);
-    color: var(--cor-clara);
+    color: #f7f3eb; /* Texto claro fixo para o rodapé escuro */
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 button {
-     background-color: var(--cor-principal);
-     color: var(--cor-clara);
-     border: none;
-     padding: 10px 15px;
-     border-radius: 8px;
-     cursor: pointer;
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
+
 button:hover {
     background-color: var(--cor-hover);
-     
 }
 
 .curtir {
@@ -131,7 +142,8 @@ button:hover {
     width: fit-content;
     margin: 20px auto;
 }
- .galeria{
+
+.galeria {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -144,12 +156,16 @@ button:hover {
     flex-wrap: wrap;
 }
 
-.bnt-tema{
+.bnt-tema {
     position: fixed;
-    right: 20;
+    right: 20px;
     bottom: 20px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar o botão flutuante */
 }
